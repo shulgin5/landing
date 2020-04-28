@@ -1,6 +1,9 @@
 body{
     font-family: 'Ubuntu';
 }
+p{
+	color:#8b8b8b;
+}
 .title{
     background-color: #02779b;
     color:#fff;
@@ -18,6 +21,7 @@ body{
 .swiper-container {
     width: 100%;
     height: 100%;
+	margin-bottom:10px;
   }
   .swiper-slide {
     text-align: center;
@@ -38,6 +42,65 @@ body{
     -webkit-align-items: center;
     align-items: center;
   }
+.product-name {
+    margin-left:10px;
+}
+.count-buy {
+}
+.mark{
+	color:#02779b;
+}
+.mark-param{
+	color:black;
+}
+.rating-result {
+	width: 100%
+	margin:0;
+	margin-bottom:10px;
+}
+.rating-result span {
+	padding: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-result > span:before {
+	content: '★';
+}
+.rating-result > span.active {
+	color: yellow;
+	text-shadow: 1px 1px #c60;
+}
+.quality{
+	
+}
+	.quality b{
+		background: url(../img/quality.png);
+		height: 22px;
+		width: 22px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		content: '';
+		display: block;
+		left: 10;
+		position: absolute;
+		top: 0;
+	}
+	.quality-text{
+		margin-left:25px;
+	}
+.rewiews-link{
+	border-bottom: 1px dotted #8b8b8b;
+	color:#8b8b8b;
+	text-decoration:none;
+}
+.rewiews-link:hover{
+	color:black;
+	border-bottom: 1px dotted black;
+	text-decoration:none;
+}
 .info{
     background-color: black;
 }
+
