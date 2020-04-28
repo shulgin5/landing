@@ -90,17 +90,36 @@ p{
 	.quality-text{
 		margin-left:25px;
 	}
-.rewiews-link{
+.link{
 	border-bottom: 1px dotted #8b8b8b;
 	color:#8b8b8b;
 	text-decoration:none;
 }
-.rewiews-link:hover{
+.link:hover{
 	color:black;
 	border-bottom: 1px dotted black;
 	text-decoration:none;
 }
 .info{
-    background-color: black;
+	padding-top: 30px;
 }
-
+	.price{
+		font-size: 36px;
+		font-weight: 700;
+		font-family: 'Cantarell';
+	}
+	.old-price{
+		color: #8b8b8b;
+		text-decoration: line-through;
+		font-size: 20px;
+		font-family: 'Cantarell';
+	}
+	.param{
+		margin-top:20px;
+	}
+	.order-button{
+		margin-top:20px;
+	}
+.structure{
+	padding-left:10px;
+}
