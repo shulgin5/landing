@@ -26,3 +26,12 @@ var swiper = new Swiper('.swiper-container', {
       properties_button.innerHTML = "Развернуть";
     }
   };
+
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) 
+    var recipient = button.data('whatever') 
+    var modal = $(this)
+    modal.find('.modal-title').text("Отзыв")
+    modal.find('.modal-body input').val(recipient)
+    modal.find('.modal-body input').val('12321')
+  })

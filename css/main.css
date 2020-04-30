@@ -153,3 +153,33 @@ p{
 	#properties_button{
 		
 	}
+.reviews{
+
+}
+	.review{
+		padding-top:10px;
+	}
+		.review > b {
+			background-image: url(../img/person.png);
+			height: 50px;
+			width: 50px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			content: '';
+			display: block;
+			left: 10;
+			position: absolute;
+			/* top: 0; */
+		}
+		.review_text{
+			margin-left: 60px;
+			margin-top:9px;
+		}
+		.review_name{
+			margin-left: 60px;
+			font-weight: 500;
+			border-bottom: 1px dotted black;
+		}
+		.review_date{
+			color: #8b8b8b;
+		}

@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
     </head>
     <body>
         <div class="container-fluid title">
@@ -65,7 +66,7 @@
 						  	</div>
 						  	<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<p><a href="#" class="link">14 отзывов</a></p>
+									<p><a href="#yak-review" class="link">14 отзывов</a></p>
 								</div>
 						  	</div>
                       </div>
@@ -131,7 +132,79 @@
                     <a class="accordion" id="properties_button">Развернуть</a>
                 </div>
             </div>
+            <div class="row reviews" id="yak-review">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Отзывы</h3>
+                        <div class="review">
+                            <b></b>
+                            <span class="review_name">Анна</span>
+                            <span class="review_date">14.01.2020</span>
+                            <p class="review_text">
+                                Понравился. Антисептик приятный на запах пахнет лимончиком, запах ненавязчивый. Заказывала на работу, для протирания поверхностей, хорош тем что не липнется. Упаковка пришла целая, ничего не протекло. Заказывала за 923 руб. Это цена ещё приемлима за литр, если заказывать маленькие объёмы выходит гораздо дороже
+                            </p>
+                        </div>
+                        <div class="review">
+                            <b></b>
+                            <span class="review_name">Анна</span>
+                            <span class="review_date">14.01.2020</span>
+                            <p class="review_text">
+                                Понравился. Антисептик приятный на запах пахнет лимончиком, запах ненавязчивый. Заказывала на работу, для протирания поверхностей, хорош тем что не липнется. Упаковка пришла целая, ничего не протекло. Заказывала за 923 руб. Это цена ещё приемлима за литр, если заказывать маленькие объёмы выходит гораздо дороже
+                            </p>
+                        </div>
+                        <div class="review">
+                            <b></b>
+                            <span class="review_name">Анна</span>
+                            <span class="review_date">14.01.2020</span>
+                            <p class="review_text">
+                                Понравился. Антисептик приятный на запах пахнет лимончиком, запах ненавязчивый. Заказывала на работу, для протирания поверхностей, хорош тем что не липнется. Упаковка пришла целая, ничего не протекло. Заказывала за 923 руб. Это цена ещё приемлима за литр, если заказывать маленькие объёмы выходит гораздо дороже
+                            </p>
+                        </div>
+                        <div class="review">
+                            <b></b>
+                            <span class="review_name">Анна</span>
+                            <span class="review_date">14.01.2020</span>
+                            <p class="review_text">
+                                Понравился. Антисептик приятный на запах пахнет лимончиком, запах ненавязчивый. Заказывала на работу, для протирания поверхностей, хорош тем что не липнется. Упаковка пришла целая, ничего не протекло. Заказывала за 923 руб. Это цена ещё приемлима за литр, если заказывать маленькие объёмы выходит гораздо дороже
+                            </p>
+                        </div>
+                </div>
+            </div>
         </div>
+
+        <div class="bd-example">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Написать отзыв</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Отзыв</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="recipient-name" class="form-control-label">Ваше имя:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="form-group">
+                        <label for="message-text" class="form-control-label">Сообщение:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script src="js/jquery-3.5.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/main.js"></script>
     </body>
