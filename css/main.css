@@ -123,3 +123,33 @@ p{
 .structure{
 	padding-left:10px;
 }
+.accordion{
+	font-size:15px;
+	color: #02779b;
+	cursor: pointer;
+	border-bottom: 1px dotted #02779b;
+	text-decoration: none;
+}
+	.accordion:hover{
+		font-size:15px;
+		color: #8b8b8b;
+		cursor: pointer;
+		border-bottom: 1px dotted #8b8b8b;
+		text-decoration: none;
+	}
+	#description_text{
+		height: 50px;
+		overflow:hidden;
+		text-overflow: ellipsis;
+	}
+	#description_button{
+		
+	}
+	#properties_text{
+		height: 90px;
+		overflow:hidden;
+		text-overflow: ellipsis;
+	}
+	#properties_button{
+		
+	}
