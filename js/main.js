@@ -40,9 +40,18 @@ var swiper = new Swiper('.swiper-container', {
     var modal = $('#reviewModal')
     var client = modal.find('.modal-body input').val()
     var review = modal.find('.modal-body textarea').val()
+    var status = $('#status-review')
+    if (client!='' && review!=''){
+      modal.find('.modal-body textarea').val('')
+      modal.find('.modal-body input').val('')
+      status.html('Отзыв успешно отправлен! После проверки модератором отзыв появится в блоке.')
+      status.css('display','block')
+      status.css('color','#36d536')
+    }else{
+      status.html('Заполните все поля!')
+      status.css('display','block')
+      status.css('color','red')
+    }
 
-    modal.find('.modal-body textarea').val('')
-    modal.find('.modal-body input').val('')
-    $('#status-review').html('Отзыв успешно отправлен! После проверки модератором отзыв появится в блоке.')
-    $('#status-review').css('display','block')
+    
   })
