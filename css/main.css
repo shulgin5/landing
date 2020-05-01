@@ -183,3 +183,15 @@ p{
 		.review_date{
 			color: #8b8b8b;
 		}
+		.bd-review {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		#status-review{
+			margin-left: 15px;
+			margin-right: 15px;
+			font-size: 20px;
+			color: #36d536;
+			display: none;
+			text-align: center;
+		}

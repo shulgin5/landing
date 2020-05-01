@@ -27,11 +27,22 @@ var swiper = new Swiper('.swiper-container', {
     }
   };
 
-  $('#exampleModal').on('show.bs.modal', function (event) {
+  $('#reviewModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) 
     var recipient = button.data('whatever') 
     var modal = $(this)
-    modal.find('.modal-title').text("Отзыв")
+    
+    /* modal.find('.modal-title').text("Отзыв")
     modal.find('.modal-body input').val(recipient)
-    modal.find('.modal-body input').val('12321')
+    modal.find('.modal-body input').val() */
+  })
+  $('#send-review').on('click', function (event) {
+    var modal = $('#reviewModal')
+    var client = modal.find('.modal-body input').val()
+    var review = modal.find('.modal-body textarea').val()
+
+    modal.find('.modal-body textarea').val('')
+    modal.find('.modal-body input').val('')
+    $('#status-review').html('Отзыв успешно отправлен! После проверки модератором отзыв появится в блоке.')
+    $('#status-review').css('display','block')
   })
