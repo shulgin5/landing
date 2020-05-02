@@ -26,7 +26,7 @@ p{
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff no-repeat;
+    background: #fff;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -54,7 +54,7 @@ p{
 	color:black;
 }
 .rating-result {
-	width: 100%
+	width: 100%;
 	margin:0;
 	margin-bottom:10px;
 }
