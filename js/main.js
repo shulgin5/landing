@@ -44,13 +44,13 @@ var swiper = new Swiper('.swiper-container', {
     if (client!='' && review!=''){
       modal.find('.modal-body textarea').val('')
       modal.find('.modal-body input').val('')
-      status.html('Отзыв успешно отправлен! После проверки модератором отзыв появится в блоке.')
+      status.html('Отзыв успешно отправлен! <br><span class="review-mark">После проверки модератором отзыв появится в блоке.</span>')
       status.css('display','block')
       status.css('color','#36d536')
     }else{
       status.html('Заполните все поля!')
       status.css('display','block')
-      status.css('color','red')
+      status.css('color','rgb(181, 3, 3)')
     }
 
     
