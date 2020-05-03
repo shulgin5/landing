@@ -33,14 +33,20 @@
 /* Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-
+    .swiper-slide img{
+        width:624px;
+        height:auto;
+        }
 }
 
 
 /* Wide Mobile Layout: 600px - 767px. */
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-
+    .swiper-slide img{
+        width:683px;
+        height:auto;
+        }
 }
 
 
@@ -53,4 +59,8 @@
         .product-name h2{
             font-size: 20px;
         }
+        .swiper-slide img{
+            width:327px;
+            height:auto;
+            }
 }

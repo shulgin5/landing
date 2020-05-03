@@ -40,11 +40,6 @@ p{
 	-webkit-align-items: center;
 	align-items: center;
   }
-  .swiper-slide img {
-	display: block;
-	max-width: 100%;
-	height:auto;
-  }
 .product-name {
     margin-left:10px;
 }
