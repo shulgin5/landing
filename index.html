@@ -88,7 +88,55 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 order-button">
-                                <button type="button" class="btn btn-success btn-lg btn-block">Заказать</button>
+                                <div class="bd-order">
+                                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#orderModal">Заказать</button>
+                        
+                                    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="orderModalLabel">Заказ</h4>
+                                          </div>
+                                          <b id="status-order"></b>
+                                          <div class="modal-body">
+                                            <form>
+                                              <div class="form-group">
+                                                <input type="text" class="form-control" id="order-name" placeholder="Ваше имя">
+                                              </div>
+                                              <div class="form-group">
+                                                <input type="text" class="form-control" id="order-phone" placeholder="Номер телефона">
+                                              </div>
+                                              <div class="form-group">
+                                                <select class="form-control form-control-sm">
+                                                    <option>Архангельск</option>
+                                                    <option>Москва</option>
+                                                    <option>Санкт-Петербург</option>
+                                                  </select>
+                                              </div>
+                                              <div class="form-group">
+                                                <input type="text" class="form-control" id="order-address" placeholder="Улица">
+                                                <input type="text" class="form-control" id="order-address" placeholder="Дом">
+                                                <input type="text" class="form-control" id="order-address" placeholder="Корпус (при наличии)">
+                                                <input type="text" class="form-control" id="order-address" placeholder="Квартира/комната">
+                                              </div>
+                                              <div class="form-group">
+                                                <label>
+                                                  <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="policy.html" target="_blank">Политикой конфиденциальности</a>
+                                                </label>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                            <button type="button" id="send-review" class="btn btn-success">Заказать</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -213,6 +261,7 @@
             </div>
         </div>   
         <script src="js/jquery-3.5.0.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/main.js"></script>

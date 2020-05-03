@@ -4,7 +4,7 @@ var swiper = new Swiper('.swiper-container', {
     clickable: true,
   },
 });
-
+$("#order-phone").mask("+7(999) 999-9999");
   description_button.onclick = function() {
     if(description_button.innerHTML == "Развернуть"){
       description_text.style.overflow = "visible";
@@ -27,7 +27,6 @@ var swiper = new Swiper('.swiper-container', {
       properties_button.innerHTML = "Развернуть";
     }
   };
-
   $('#reviewModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) 
     var recipient = button.data('whatever') 
@@ -38,6 +37,7 @@ var swiper = new Swiper('.swiper-container', {
     modal.find('.modal-body input').val() */
   })
   $('#send-review').on('click', function (event) {
+    alert(323)
     var modal = $('#reviewModal')
     var client = modal.find('.modal-body input').val()
     var review = modal.find('.modal-body textarea').val()
@@ -52,7 +52,5 @@ var swiper = new Swiper('.swiper-container', {
       status.html('Заполните все поля!')
       status.css('display','block')
       status.css('color','rgb(181, 3, 3)')
-    }
-
-    
+    } 
   })
