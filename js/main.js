@@ -1,8 +1,13 @@
 var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerColumnFill:"row",
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
   description_button.onclick = function() {
     if(description_button.innerHTML == "Развернуть"){
