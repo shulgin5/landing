@@ -40,9 +40,17 @@ var swiper = new Swiper('.swiper-container', {
     if (client!='' && review!=''){
       modal.find('.modal-body textarea').val('')
       modal.find('.modal-body input').val('')
-      status.html('Отзыв успешно отправлен! <br><span class="review-mark">После проверки модератором отзыв появится в блоке.</span>')
       status.css('display','block')
       status.css('color','#36d536')
+      $.ajax({
+        url: 'php/send-review.php',
+        method: 'post',
+        dataType: 'html',
+        data: {'client': client, 'review': review},
+        success: function(data){
+          status.html(data)
+        }
+      });
     }else{
       status.html('Заполните все поля!')
       status.css('display','block')
