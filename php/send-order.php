@@ -10,7 +10,7 @@
         $korpus = strip_data($_POST['korpus']);
         $room = strip_data($_POST['room']);
         if($client!="" && $phone!="" && $city!="" 
-        && $address!="" && $home!="" && $korpus!="" && $room!=""){
+        && $address!="" && $home!="" && $room!=""){
             $message = $client."\n".$phone."\n"."Город:".$city."\n"."Адрес:".$address."\n"."Дом:".$home."\n"."Корпус:".$korpus."\n"."Квартира:".$room;
             mail('arhfit@mail.ru', 'Заказ', $message);
             echo 'Заказ принят';
