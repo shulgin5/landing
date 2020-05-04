@@ -107,14 +107,6 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-home').css('border','1px solid #ccc');
     }
 
-    if (korpus==''){
-      $('#order-korpus').css('border','1px solid red');
-      $('#order-korpus').val('')
-      flag = false
-    }else{
-      $('#order-korpus').css('border','1px solid #ccc');
-    }
-
     if (room==''){
       $('#order-room').css('border','1px solid red');
       $('#order-room').val('')

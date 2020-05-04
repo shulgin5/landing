@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['client']) && isset($_POST['phone']) 
     && isset($_POST['address']) && isset($_POST['home'])
-    && isset($_POST['korpus']) && isset($_POST['room']) && isset($_POST['city'])){
+    && isset($_POST['room']) && isset($_POST['city'])){
         $client = strip_data($_POST['client']);
         $phone = strip_data($_POST['phone']);
         $city = strip_data($_POST['city']);
@@ -11,7 +11,7 @@
         $room = strip_data($_POST['room']);
         if($client!="" && $phone!="" && $city!="" 
         && $address!="" && $home!="" && $korpus!="" && $room!=""){
-            $message = $client."\n".$phone."\n".$city."\n".$address."\n".$home."\n".$korpus."\n".$room;
+            $message = $client."\n".$phone."\n"."Город:".$city."\n"."Адрес:".$address."\n"."Дом:".$home."\n"."Корпус:".$korpus."\n"."Квартира:".$room;
             mail('arhfit@mail.ru', 'Заказ', $message);
             echo 'Заказ принят';
         }else{
