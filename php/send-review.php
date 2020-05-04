@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['client']) || isset($_POST['review'])){
+    if(isset($_POST['client']) && isset($_POST['review'])){
         $client = strip_data($_POST['client']);
         $review = strip_data($_POST['review']);
         if($client!="" && $review!=""){

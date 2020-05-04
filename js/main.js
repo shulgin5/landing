@@ -73,7 +73,7 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-name').val('')
       flag = false
     }else{
-      $('#order-name').css('border','1px solid #5cb85c');
+      $('#order-name').css('border','1px solid #ccc');
     }
 
     if (phone==''){
@@ -81,14 +81,14 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-phone').val('')
       flag = false
     }else{
-      $('#order-phone').css('border','1px solid #5cb85c');
+      $('#order-phone').css('border','1px solid #ccc');
     }
 
     if (city==''){
       $('#order-city').css('border','1px solid red');
       flag = false
     }else{
-      $('#order-city').css('border','1px solid #5cb85c');
+      $('#order-city').css('border','1px solid #ccc');
     }
 
     if (address==''){
@@ -96,7 +96,7 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-address').val('')
       flag = false
     }else{
-      $('#order-address').css('border','1px solid #5cb85c');
+      $('#order-address').css('border','1px solid #ccc');
     }
 
     if (home==''){
@@ -104,7 +104,7 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-home').val('')
       flag = false
     }else{
-      $('#order-home').css('border','1px solid #5cb85c');
+      $('#order-home').css('border','1px solid #ccc');
     }
 
     if (korpus==''){
@@ -112,7 +112,7 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-korpus').val('')
       flag = false
     }else{
-      $('#order-korpus').css('border','1px solid #5cb85c');
+      $('#order-korpus').css('border','1px solid #ccc');
     }
 
     if (room==''){
@@ -120,14 +120,14 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-room').val('')
       flag = false
     }else{
-      $('#order-room').css('border','1px solid #5cb85c');
+      $('#order-room').css('border','1px solid #ccc');
     }
 
     if (!checkbox){
       $('#accept').parent().css('color', 'red');
       flag = false
     }else{
-      $('#accept').parent().css('color', '#5cb85c');
+      $('#accept').parent().css('color', 'black');
     }
 
     if (flag){
@@ -139,8 +139,7 @@ var swiper = new Swiper('.swiper-container', {
         'city':city, 'address':address, 'home':home,
         'korpus':korpus, 'room':room },
         success: function(data){
-          // status.html(data)
-          $('.order-body').html('Заказ отправлен');
+          swal("Заказ принят!", "В ближайшее время с Вами свяжется менеджер для подтверждения заказа", "success");
         }
       });
       $('#order-name').val('')
@@ -150,26 +149,7 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-korpus').val('')
       $('#order-room').val('')
       $("#accept").prop('checked', false);
-      $('.order-body').html('Заказ отправлен');
+      $('#orderModal').modal('hide')
     }
-
-
-    /* if (client!='' && phone!='' && city!=''&& address!='' && home!='' && room!='' && checkbox){
-
-      
-      $.ajax({
-        url: 'php/send-review.php',
-        method: 'post',
-        dataType: 'html',
-        data: {'client': client, 'review': review},
-        success: function(data){
-          status.html(data)
-        }
-      });
-    }else{
-      status.html('Заполните все поля!')
-      status.css('display','block')
-      status.css('color','rgb(181, 3, 3)')
-    }  */
   })
   $("#order-phone").mask("+7(999) 999-9999");
