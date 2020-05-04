@@ -57,4 +57,119 @@ var swiper = new Swiper('.swiper-container', {
       status.css('color','rgb(181, 3, 3)')
     } 
   })
+  $('#send-order').on('click', function (event) {
+    var modal = $('#orderModal')
+    var client = $('#order-name').val().trim()
+    var phone = $('#order-phone').val().trim()
+    var city = $('#order-city').val().trim()
+    var address = $('#order-address').val().trim()
+    var home = $('#order-home').val().trim()
+    var korpus = $('#order-korpus').val().trim()
+    var room = $('#order-room').val().trim()
+    var checkbox = $("#accept").prop("checked")
+    var flag = true
+    if (client==''){
+      $('#order-name').css('border','1px solid red');
+      $('#order-name').val('')
+      flag = false
+    }else{
+      $('#order-name').css('border','1px solid #5cb85c');
+    }
+
+    if (phone==''){
+      $('#order-phone').css('border','1px solid red');
+      $('#order-phone').val('')
+      flag = false
+    }else{
+      $('#order-phone').css('border','1px solid #5cb85c');
+    }
+
+    if (city==''){
+      $('#order-city').css('border','1px solid red');
+      flag = false
+    }else{
+      $('#order-city').css('border','1px solid #5cb85c');
+    }
+
+    if (address==''){
+      $('#order-address').css('border','1px solid red');
+      $('#order-address').val('')
+      flag = false
+    }else{
+      $('#order-address').css('border','1px solid #5cb85c');
+    }
+
+    if (home==''){
+      $('#order-home').css('border','1px solid red');
+      $('#order-home').val('')
+      flag = false
+    }else{
+      $('#order-home').css('border','1px solid #5cb85c');
+    }
+
+    if (korpus==''){
+      $('#order-korpus').css('border','1px solid red');
+      $('#order-korpus').val('')
+      flag = false
+    }else{
+      $('#order-korpus').css('border','1px solid #5cb85c');
+    }
+
+    if (room==''){
+      $('#order-room').css('border','1px solid red');
+      $('#order-room').val('')
+      flag = false
+    }else{
+      $('#order-room').css('border','1px solid #5cb85c');
+    }
+
+    if (!checkbox){
+      $('#accept').parent().css('color', 'red');
+      flag = false
+    }else{
+      $('#accept').parent().css('color', '#5cb85c');
+    }
+
+    if (flag){
+      $.ajax({
+        url: 'php/send-order.php',
+        method: 'post',
+        dataType: 'html',
+        data: {'client': client, 'phone': phone, 
+        'city':city, 'address':address, 'home':home,
+        'korpus':korpus, 'room':room },
+        success: function(data){
+          // status.html(data)
+          $('.order-body').html('Заказ отправлен');
+        }
+      });
+      $('#order-name').val('')
+      $('#order-phone').val('')
+      $('#order-address').val('')
+      $('#order-home').val('')
+      $('#order-korpus').val('')
+      $('#order-room').val('')
+      $("#accept").prop('checked', false);
+      $('.order-body').html('Заказ отправлен');
+    }
+
+
+    /* if (client!='' && phone!='' && city!=''&& address!='' && home!='' && room!='' && checkbox){
+
+      
+      $.ajax({
+        url: 'php/send-review.php',
+        method: 'post',
+        dataType: 'html',
+        data: {'client': client, 'review': review},
+        success: function(data){
+          status.html(data)
+        }
+      });
+    }else{
+      status.html('Заполните все поля!')
+      status.css('display','block')
+      status.css('color','rgb(181, 3, 3)')
+    }  */
+  })
   $("#order-phone").mask("+7(999) 999-9999");
