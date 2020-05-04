@@ -59,8 +59,12 @@
         .product-name h2{
             font-size: 20px;
         }
-        .swiper-slide img{
+        .swiper-slide{
             width:327px;
+            height:auto;
+            }
+        .swiper-slide img{
+            width:100%;
             height:auto;
             }
 }
