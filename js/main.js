@@ -61,11 +61,6 @@ var swiper = new Swiper('.swiper-container', {
     var modal = $('#orderModal')
     var client = $('#order-name').val().trim()
     var phone = $('#order-phone').val().trim()
-    var city = $('#order-city').val().trim()
-    var address = $('#order-address').val().trim()
-    var home = $('#order-home').val().trim()
-    var korpus = $('#order-korpus').val().trim()
-    var room = $('#order-room').val().trim()
     var checkbox = $("#accept").prop("checked")
     var flag = true
     if (client==''){
@@ -84,37 +79,6 @@ var swiper = new Swiper('.swiper-container', {
       $('#order-phone').css('border','1px solid #ccc');
     }
 
-    if (city==''){
-      $('#order-city').css('border','1px solid red');
-      flag = false
-    }else{
-      $('#order-city').css('border','1px solid #ccc');
-    }
-
-    if (address==''){
-      $('#order-address').css('border','1px solid red');
-      $('#order-address').val('')
-      flag = false
-    }else{
-      $('#order-address').css('border','1px solid #ccc');
-    }
-
-    if (home==''){
-      $('#order-home').css('border','1px solid red');
-      $('#order-home').val('')
-      flag = false
-    }else{
-      $('#order-home').css('border','1px solid #ccc');
-    }
-
-    if (room==''){
-      $('#order-room').css('border','1px solid red');
-      $('#order-room').val('')
-      flag = false
-    }else{
-      $('#order-room').css('border','1px solid #ccc');
-    }
-
     if (!checkbox){
       $('#accept').parent().css('color', 'red');
       flag = false
@@ -124,22 +88,16 @@ var swiper = new Swiper('.swiper-container', {
 
     if (flag){
       $.ajax({
-        url: 'php/send-order.php',
+        url: 'php/send-order-new.php',
         method: 'post',
         dataType: 'html',
-        data: {'client': client, 'phone': phone, 
-        'city':city, 'address':address, 'home':home,
-        'korpus':korpus, 'room':room },
+        data: {'client': client, 'phone': phone},
         success: function(data){
           swal("Заказ принят!", "В ближайшее время с Вами свяжется менеджер для подтверждения заказа", "success");
         }
       });
       $('#order-name').val('')
       $('#order-phone').val('')
-      $('#order-address').val('')
-      $('#order-home').val('')
-      $('#order-korpus').val('')
-      $('#order-room').val('')
       $("#accept").prop('checked', false);
       $('#orderModal').modal('hide')
     }

@@ -98,6 +98,16 @@ p{
 	border-bottom: 1px dotted black;
 	text-decoration:none;
 }
+.link-phone{
+	border-bottom: 1px dotted white;
+	color:white;
+	text-decoration:none;
+}
+.link-phone:hover{
+	color:black;
+	border-bottom: 1px dotted black;
+	text-decoration:none;
+}
 .info{
 	padding-top: 30px;
 }
